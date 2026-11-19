@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- replace WEBSITE with the address where this site is being hosted -->
+   <url>
+       <loc>WEBSITE</loc>
+   </url>
+   <url>
+       <loc>WEBSITE/sharedTask</loc>
+   </url>
+   <url>
+       <loc>WEBSITE/program</loc>
+   </url>
+   <url>
+       <loc>WEBSITE/directions</loc>
+   </url>
+   <url>
+       <loc>WEBSITE/sponsor</loc>
+   </url>
+   <url>
+       <loc>WEBSITE/flyer</loc>
+   </url>
+   <url>
+       <loc>WEBSITE/previous-workshops</loc>
+   </url>
+   <url>
+       <loc>WEBSITE/previous-workshops/2025</loc>
+   </url>
+</urlset>
