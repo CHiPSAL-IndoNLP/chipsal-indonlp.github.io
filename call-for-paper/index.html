@@ -1,96 +1,840 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <base href="..">
-    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
-    <link rel="stylesheet" type="text/css" media="all" href="assets/main.css">
-    <script src="assets/navigation.js" defer></script>
-    <meta name="description" content="Program for the 2nd Joint CHiPSAL–IndoNLP Workshop at COLING 2027.">
-    <meta name="resource-type" content="document">
-    <meta name="distribution" content="global">
-    <meta name="keywords" content="CHiPSAL, IndoNLP, COLING 2027, program">
-    <title>Call for Paper| Joint CHiPSAL–IndoNLP Workshop</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHiPSAL–IndoNLP 2027 | Joint Workshop at COLING 2027</title>
+  <meta name="description" content="Joint Workshop on Challenges in Processing South Asian Languages (CHiPSAL) and Natural Language Processing for Indo-Aryan and Dravidian Languages (IndoNLP) at COLING 2027, Macau, China." />
+
+  <!-- Google Fonts (with graceful system fallbacks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #14365d;
+      --primary-dark: #0d2440;
+      --primary-light: #eef4fa;
+      --accent: #b45309;
+      --accent-bg: #fef3c7;
+      --teal: #0f766e;
+      --teal-bg: #f0fdfa;
+      --text-main: #1e293b;
+      --text-muted: #475569;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --border: #e2e8f0;
+      --radius: 10px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.08);
+      --max-width: 1060px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 76px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-page);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      color: var(--primary-dark);
+      line-height: 1.25;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navigation */
+    header.site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .brand-tag {
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.18rem 0.5rem;
+      border-radius: 4px;
+      letter-spacing: 0.03em;
+    }
+
+    nav.nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.35rem;
+    }
+
+    nav.nav-links a {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.15s ease;
+    }
+
+    nav.nav-links a:hover {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.4rem 0.65rem;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: var(--primary-dark);
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 62%, #1d4ed8 100%);
+      color: #ffffff;
+      padding: 4.25rem 1.25rem 3.75rem;
+      border-bottom: 4px solid #d97706;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .badge-highlight {
+      background: #f59e0b;
+      color: #1e293b;
+      border-color: #f59e0b;
+    }
+
+    .hero h1 {
+      color: #ffffff;
+      font-size: clamp(1.85rem, 3.6vw, 2.65rem);
+      margin-bottom: 0.9rem;
+      max-width: 900px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: #e2e8f0;
+      max-width: 820px;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      color: #f8fafc;
+      margin-bottom: 2rem;
+    }
+
+    .hero-meta span strong {
+      color: #fcd34d;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.35rem;
+      border-radius: 7px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.12s ease, background 0.15s ease;
+    }
+
+    .btn:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: #ffffff;
+      color: var(--primary-dark);
+    }
+
+    .btn-primary:hover {
+      background: #f1f5f9;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 1.5px solid rgba(255, 255, 255, 0.75);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* Main Container & Sections */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+
+    section {
+      margin-bottom: 3.25rem;
+    }
+
+    .section-header {
+      margin-bottom: 1.35rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.55rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.65rem;
+    }
+
+    .section-lead {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.65rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Two-column Focus Grid */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.35rem;
+      margin-top: 1.25rem;
+    }
+
+    .focus-card {
+      border-top: 4px solid var(--primary);
+    }
+
+    .focus-card.indonlp {
+      border-top-color: var(--teal);
+    }
+
+    .focus-pill {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      margin-bottom: 0.65rem;
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .focus-card.indonlp .focus-pill {
+      background: var(--teal-bg);
+      color: var(--teal);
+    }
+
+    .focus-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .callout-theme {
+      margin-top: 1.35rem;
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.96rem;
+    }
+
+    /* Themes & Topics */
+    .topic-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .topic-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .topic-group h3 {
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin-bottom: 0.55rem;
+    }
+
+    ul.clean-list {
+      padding-left: 1.3rem;
+    }
+
+    ul.clean-list li {
+      margin-bottom: 0.42rem;
+    }
+
+    ul.clean-list li::marker {
+      color: var(--primary);
+    }
+
+    /* Important Dates Table */
+    .table-wrap {
+      overflow-x: auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
+
+    table.dates-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    table.dates-table th,
+    table.dates-table td {
+      padding: 0.9rem 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    table.dates-table th {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    table.dates-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    table.dates-table tr.highlight-row {
+      background: #fffbeb;
+    }
+
+    .date-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      background: var(--accent-bg);
+      color: var(--accent);
+      margin-left: 0.4rem;
+    }
+
+    .aoe-note {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Submission Guidelines */
+    .track-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .track-card h3 {
+      font-size: 1.18rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-dark);
+    }
+
+    .track-deadline {
+      display: inline-block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--accent);
+      background: var(--accent-bg);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+
+    .guidelines-block {
+      margin-top: 1.5rem;
+    }
+
+    .guidelines-block h3 {
+      font-size: 1.2rem;
+      margin: 1.25rem 0 0.55rem;
+      color: var(--primary-dark);
+    }
+
+    .guidelines-block h3:first-child {
+      margin-top: 0;
+    }
+
+    .submission-box {
+      margin-top: 1.5rem;
+      padding: 1.2rem 1.4rem;
+      background: var(--primary-light);
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    /* Organizers / Placeholder Grid */
+    .org-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .org-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.15rem;
+    }
+
+    .org-card strong {
+      display: block;
+      color: var(--primary-dark);
+    }
+
+    .org-card span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer.site-footer {
+      background: var(--primary-dark);
+      color: #cbd5e1;
+      padding: 2.5rem 1.25rem;
+      font-size: 0.92rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .footer-inner h4 {
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .footer-inner a {
+      color: #93c5fd;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav.nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1.25rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-md);
+      }
+
+      nav.nav-links.open {
+        display: flex;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <div class="banner">
-        <img src="assets/banner.jpg" alt="Workshop banner" height="400" width="1000">
-        <div class="top-left">
-            <span class="title1">CHiPSAL</span><span class="title2">&ndash;IndoNLP</span> <span class="year">2027</span>
-        </div>
-        <div class="bottom-right"> @COLING 2027<br>Macau, China </div>
+
+  <!-- Top Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#top" class="brand">
+        <span class="brand-tag">COLING 2027</span>
+        CHiPSAL–IndoNLP 2027
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        &#9776;
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#overview">Overview &amp; Focus</a>
+        <a href="#themes">Themes &amp; Topics</a>
+        <a href="#dates">Important Dates</a>
+        <a href="#guidelines">Submission Guidelines</a>
+        <a href="#organization">Organization</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <table class="navigation">
-        <tr>
-            <td class="navigation"><a class="current" aria-current="page" title="Workshop home page" href="index.html">Home</a></td>
-            <td class="navigation"><a title="Call for papers" href="call-for-paper/index.html">Call for Papers</a></td>
-            <td class="navigation"><a title="Shared task" href="sharedTask/index.html">Shared Task</a></td>
-            <td class="navigation"><a title="Workshop program" href="program/index.html">Program</a></td>
-            <!-- <td class="navigation">
-                <details class="navigation-dropdown">
-                    <summary>Other</summary>
-                    <div class="dropdown-content">
-                        <a href="previous-workshops/index.html">Previous Workshops</a>
-                        <a href="sponsor/index.html">Sponsor</a>
-                        <a href="directions/index.html">Directions</a>
-                    </div>
-                </details>
-            </td>
-            -->
-        </tr>
-    </table>
+  <!-- Hero Section -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-badges">
+        <span class="badge badge-highlight">Co-located with COLING 2027</span>
+        <span class="badge">Joint Workshop</span>
+        <span class="badge">Call for Papers</span>
+      </div>
+      <h1>Joint Workshop on Challenges in Processing South Asian Languages (CHiPSAL) &amp; NLP for Indo-Aryan and Dravidian Languages (IndoNLP)</h1>
+      <p class="hero-subtitle">
+        Uniting computational linguists, NLP researchers, speech technologists, and language communities to advance inclusive language technologies across South Asia.
+      </p>
+      <div class="hero-meta">
+        <span><strong>Workshop Dates:</strong> May 14–15, 2027</span>
+        <span><strong>Location:</strong> Macau, China (COLING 2027)</span>
+        <span><strong>Direct Submission Deadline:</strong> January 15, 2027</span>
+      </div>
+      <div class="hero-actions">
+        <a href="#guidelines" class="btn btn-primary">Submission Guidelines</a>
+        <a href="#dates" class="btn btn-outline">Important Dates</a>
+        <a href="#themes" class="btn btn-outline">Call for Papers</a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Main Content -->
+  <main>
 
-    <h2>Call for papers</h2>
-    <p> 
-    The Joint CHiPSAL&ndash;IndoNLP Workshop will take place in Hybrid mode collated with the 32nd International Conference on Computational Linguistics (COLING 2027) in Macau, China. 
-    The workshop will provide a forum for researchers and practitioners to present and discuss their work on natural language processing (NLP) for South Asian languages, including Indo-Aryan and Dravidian languages. 
-    The workshop aims to foster collaboration and knowledge sharing among researchers working on NLP for these languages, which are often underrepresented in the field of NLP. 
-    Joint CHiPSAL&ndash;IndoNLP invites the submission of original research papers, review/opinion papers, and system demonstration papers, in short or long forms, on topics that highlight the challenges related to South Asian languages, including but not limited to the following areas:
-        
-    <ul type="square" style="color: black;">
-        <li>- Large Language Models for Indo-Aryan Languages and Dravidian Languages.</li>
-        <li>- Developing a cleaned Indo-Aryan and Dravidian language corpora (UNICODE) and digital linguistic resources.</li>
-        <li>- Machine Translation and Cross-Lingual Systems </li>
-        <li>- Speech Technologies: Recognition and Synthesis</li>
-        <li>- Language Identification and Dialect Detection</li>
-        <li>- Information Extraction, OCR systems and Knowledge Modelling</li>
-        <li>- NLP Applications - Fake News, Spam, and Rumor Detection </li>
-        <li>- Hate speech and Offensive Language Detection </li>
-        <li>- Sentiment Analysis and Text Summarisation</li>
-        <li>- NLP applications: Misinformation, Conspiracy theories. Rumours, SPAM, Phishing, and similar applications.</li>
-    </ul>
+    <!-- Overview & Workshop Focus -->
+    <section id="overview">
+      <div class="section-header">
+        <h2>Overview &amp; Workshop Focus</h2>
+      </div>
+      <div class="card">
+        <p>
+          South Asia is home to hundreds of languages spoken by nearly two billion people across multiple major language families—most notably <strong>Indo-Aryan</strong> and <strong>Dravidian</strong>, alongside Tibeto-Burman, Austroasiatic, and others. Despite this immense linguistic diversity and rich cultural heritage, South Asian languages remain significantly under-resourced and under-represented in modern Natural Language Processing (NLP) and Large Language Model (LLM) research.
+        </p>
+        <p style="margin-top: 0.85rem;">
+          For <strong>COLING 2027</strong>, <strong>CHiPSAL</strong> and <strong>IndoNLP</strong> are joining forces to host a unified two-day forum bringing together researchers, linguists, and technologists to address shared bottlenecks, build open digital infrastructure, and foster cross-family comparative research.
+        </p>
 
-     <h2>Important Dates</h2>
-    <ul>
-        <li>Call for papers: <b>November 21, 2026</b></li>
-        <li>Direct paper submission deadline: <b> January 5, 2027</b></li>
-        <li>Notification of acceptance: <b>February 6, 2027</b></li>
-        <li>Camera-ready deadline: <b>March 5, 2027</b></li>
-        <li>Workshop date: <b>May 9–14, 2027</b></li>
-    </ul>
-    
-    <h2>Submission Guidelines</h2>
+        <div class="grid-2">
+          <div class="card focus-card">
+            <span class="focus-pill">CHiPSAL Focus</span>
+            <h3>Challenges in Processing South Asian Languages</h3>
+            <p>
+              CHiPSAL emphasizes foundational linguistic, script-level, and structural challenges across <strong>spoken, written, signed, and multimodal</strong> South Asian languages. It addresses core technical bottlenecks including Unicode encoding and orthographic complexities, rich morphology, dialectal variation, standardization, pervasive code-mixing, digital heritage preservation, and systematic model benchmarking.
+            </p>
+          </div>
 
-    <p style="text-align: justify;">
-       Authors are invited to submit their unpublished work that represents novel research. The papers should be written in English using the *ACL style. Authors can also submit supplementary materials, including technical appendices, source codes, datasets, and multimedia appendices. All submissions, including the main paper and its supplementary materials, should be fully anonymised. For more information on formatting and anonymity guidelines, please refer to COLING 2027 submission guidelines.
-        <br><br>
-        The workshop accepts both long papers (8 pages) and short papers (4 pages). The paper can include unlimited appendix and references. At the end of the paper (after the conclusions but before the references), papers need to include a mandatory section discussing the limitations of the work and, optionally, a section discussing ethical considerations. Papers can include unlimited pages of references and an unlimited appendix. 
-        Upon acceptance, the authors are provided with 1 more page to address the reviewer's comments.
-        <br><br>
-        All papers will be double-blind peer-reviewed. Two reviewers with the same technical expertise will review each paper. Authors of the accepted papers will present their work in either the Oral or Poster session. All accepted papers will appear in the workshop proceedings that will be published in ACL Anthology.
-    </p>
+          <div class="card focus-card indonlp">
+            <span class="focus-pill">IndoNLP Focus</span>
+            <h3>NLP for Indo-Aryan and Dravidian Languages</h3>
+            <p>
+              IndoNLP focuses on bridging the technological and resource gap specifically for <strong>Indo-Aryan and Dravidian Languages (IADL)</strong>. It highlights the creation and annotation of cleaned digital corpora, LLM adaptation for complex IADL syntax and semantics, speech and OCR technologies, cross-lingual systems, and downstream applications such as sentiment analysis, summarization, hate speech detection, and combating misinformation, fake news, and spam.
+            </p>
+          </div>
+        </div>
 
-    <h3>Anonymity Period</h3>
+        <div class="callout-theme">
+          <strong>Alignment with COLING 2027 Special Theme (<em>“NLP for Linguistics”</em>):</strong> In synergy with COLING 2027’s special theme, this joint workshop encourages research that not only builds practical NLP tools for South Asian languages, but also leverages computational modeling to deepen scientific understanding of South Asian linguistic typology, dialectal variation, and underrepresented speech communities.
+        </div>
+      </div>
+    </section>
 
-    Joint CHiPSAL&ndash;IndoNLP will follow the ACL Anonymity Policy. As a result, no anonymity period will be required, although authors are still cautioned against extensive advertising. The submissions themselves must still be fully anonymized.
+    <!-- Themes and Topics -->
+    <section id="themes">
+      <div class="section-header">
+        <h2>Themes &amp; Topics of Interest</h2>
+      </div>
+      <p class="section-lead">
+        We invite substantial, original, and unpublished research papers (long and short), resource/dataset papers, and system demonstrations covering spoken, written, signed, and multimodal South Asian languages (with particular attention to Indo-Aryan, Dravidian, and regional South Asian varieties). Topics include, but are not limited to:
+      </p>
 
-    <h3>Multiple Submission Policy</h3>
+      <div class="grid-2">
+        <div class="card topic-group">
+          <h3>1. Scripts, Orthography &amp; Core Linguistic Modeling</h3>
+          <ul class="clean-list">
+            <li>Encoding and Unicode issues in South Asian scripts</li>
+            <li>Orthographic complexities and their impact on language technology</li>
+            <li>Morphological analysis, generation, syntax, and semantic modeling in South Asian languages</li>
+            <li>Dialectal variations, language identification, dialect detection, and language standardisation</li>
+            <li>Code-mixing, code-switching, and multilingualism in South Asian contexts</li>
+          </ul>
+        </div>
 
-    Papers which are submitted to Joint CHiPSAL&ndash;IndoNLP cannot be under review for other conferences or journals at the same time. In addition, we will not consider any paper that overlaps significantly in content or results with papers that will be (or have been) published elsewhere. Submissions that violate these requirements will be desk rejected.
+        <div class="card topic-group">
+          <h3>2. Language Resources, Benchmarks &amp; Heritage Preservation</h3>
+          <ul class="clean-list">
+            <li>Developing cleaned Indo-Aryan and Dravidian language corpora (Unicode) and digital linguistic resources</li>
+            <li>Building annotated datasets for spoken, written, signed, and multimodal South Asian languages</li>
+            <li>Benchmarking and evaluating NLP models across South Asian languages and dialects</li>
+            <li>Preserving linguistic and cultural heritage through language technology</li>
+          </ul>
+        </div>
+
+        <div class="card topic-group">
+          <h3>3. Large Language Models, Translation &amp; Speech/Vision Systems</h3>
+          <ul class="clean-list">
+            <li>Large Language Models (LLMs) for South Asian, Indo-Aryan, and Dravidian languages (pre-training, instruction tuning, alignment, and efficiency)</li>
+            <li>Machine translation and cross-lingual transfer systems</li>
+            <li>Speech technologies: Automatic Speech Recognition (ASR) and Text-to-Speech (TTS) synthesis</li>
+            <li>Optical Character Recognition (OCR) systems, information extraction, and knowledge modelling</li>
+          </ul>
+        </div>
+
+        <div class="card topic-group">
+          <h3>4. Downstream Applications &amp; Online Safety</h3>
+          <ul class="clean-list">
+            <li>Sentiment analysis, opinion mining, and text summarisation</li>
+            <li>Hate speech, abusive language, and offensive content detection</li>
+            <li>Detection of fake news, rumors, spam, phishing, conspiracy theories, and misinformation</li>
+            <li>Real-world NLP applications in education, healthcare, governance, and accessibility for South Asian communities</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Dates -->
+    <section id="dates">
+      <div class="section-header">
+        <h2>Important Dates</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="dates-table">
+          <thead>
+            <tr>
+              <th>Milestone</th>
+              <th>Date</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Call for Papers Release</strong></td>
+              <td>November 21, 2026</td>
+              <td>First joint CFP announcement</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>Direct Paper Submission Deadline</strong></td>
+              <td><strong>January 15, 2027</strong> <span class="date-badge">Direct Track</span></td>
+              <td>Reviewed by 3 Program Committee reviewers</td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>ARR Paper Submission Deadline</strong></td>
+              <td><strong>February 15, 2027</strong> <span class="date-badge">ARR Track</span></td>
+              <td>For papers submitted to the COLING 2027 ARR cycle</td>
+            </tr>
+            <tr>
+              <td><strong>Notification of Acceptance</strong></td>
+              <td>February 28, 2027</td>
+              <td>Decisions sent for both Direct and ARR tracks</td>
+            </tr>
+            <tr>
+              <td><strong>Camera-Ready Paper Deadline</strong></td>
+              <td>March 7, 2027</td>
+              <td>Final proceedings-ready manuscripts due</td>
+            </tr>
+            <tr>
+              <td><strong>Joint Workshop Dates</strong></td>
+              <td><strong>May 14–15, 2027</strong></td>
+              <td>Co-located with COLING 2027 (Macau, China)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="aoe-note">
+        * All submission deadlines are <strong>11:59 PM UTC-12:00 (“Anywhere on Earth” / AoE)</strong>.
+      </p>
+    </section>
+
+    <!-- Submission Guidelines -->
+    <section id="guidelines">
+      <div class="section-header">
+        <h2>Submission Guidelines (COLING 2027 Standards)</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="track-card">
+          <span class="track-deadline">Deadline: January 15, 2027</span>
+          <h3>Track 1: Direct Workshop Submissions</h3>
+          <p>
+            Intended for original, unpublished research papers submitted directly to the joint workshop. All direct submissions undergo rigorous <strong>double-blind peer review by 3 reviewers</strong> with relevant domain expertise from the joint Program Committee.
+          </p>
+        </div>
+
+        <div class="track-card">
+          <span class="track-deadline">Deadline: February 15, 2027</span>
+          <h3>Track 2: COLING 2027 ARR Submissions</h3>
+          <p>
+            Intended for papers previously submitted to the <strong>COLING 2027 ACL Rolling Review (ARR)</strong> cycle (following COLING 2027 main conference notifications on February 10, 2027). Authors must submit their manuscript along with their <strong>ARR reviews, meta-review, and a brief response/revision summary</strong> detailing how reviewer comments have been or will be addressed.
+          </p>
+        </div>
+      </div>
+
+      <div class="card guidelines-block">
+        <h3>Paper Categories, Formatting &amp; Page Limits</h3>
+        <ul class="clean-list">
+          <li><strong>Templates &amp; Language:</strong> All submissions must be written in English and formatted using the official <strong>*ACL / COLING 2027 style templates</strong> (LaTeX, Overleaf, or Word).</li>
+          <li><strong>Long Papers:</strong> Up to <strong>8 pages</strong> of main content.</li>
+          <li><strong>Short Papers &amp; System Demonstrations:</strong> Up to <strong>4 pages</strong> of main content.</li>
+          <li><strong>Unlimited References &amp; Appendices:</strong> Page limits apply strictly to the main body of the paper. Papers may include <strong>unlimited pages</strong> for references, technical appendices, data/code statements, and supplementary materials (such as source code, datasets, or multimedia files).</li>
+          <li><strong>Camera-Ready Page Allowance:</strong> Upon acceptance, both long and short papers are granted <strong>1 additional page</strong> of main content (up to <strong>9 pages</strong> for long papers and <strong>5 pages</strong> for short papers) to incorporate reviewer feedback.</li>
+        </ul>
+
+        <h3>Mandatory Sections &amp; Reproducibility</h3>
+        <ul class="clean-list">
+          <li><strong>Mandatory Limitations Section:</strong> Following COLING 2027 requirements, all submissions must include a dedicated <strong>Limitations</strong> section at the end of the paper (after the Conclusion and before the References; excluded from the page limit).</li>
+          <li><strong>Ethics &amp; Data/Code Availability:</strong> Authors are strongly encouraged to include an <strong>Ethics Statement</strong> (excluded from the page limit) and a <strong>Data/Code Availability Statement</strong>. Newly created language resources are encouraged to be documented via open repositories or the <a href="https://lremap.elra.info/" target="_blank" rel="noopener">LRE Map</a>.</li>
+        </ul>
+
+        <h3>Anonymity, Preprints &amp; Publication Policy</h3>
+        <ul class="clean-list">
+          <li><strong>Double-Blind Anonymization:</strong> All direct submissions (including appendices and linked repositories) must be fully anonymized for double-blind review. Remove all author names, affiliations, acknowledgments, and self-identifying repository URLs from the initial submission.</li>
+          <li><strong>Preprint &amp; Multiple Submission Policy:</strong> Consistent with COLING 2027 and ACL policies, there is no anonymity period restricting arXiv or preprint posting. Concurrent submissions to other venues must be declared at submission time; if accepted to the joint CHiPSAL–IndoNLP workshop, the paper must be withdrawn from other archival venues.</li>
+          <li><strong>Presentation &amp; Proceedings:</strong> Accepted papers will be presented as either <strong>Oral</strong> or <strong>Poster / Poster+Demo</strong> presentations (with no distinction in the proceedings between oral and poster papers) and will be published in the official <strong>COLING 2027 Joint Workshop Proceedings</strong> in the <strong>ACL Anthology</strong>. At least one author of each accepted paper must register for the workshop and present the work.</li>
+        </ul>
+
+        <div class="submission-box">
+          <div>
+            <strong>Submission Portal &amp; COLING 2027 Author Kit</strong>
+            <p style="font-size: 0.92rem; color: var(--text-muted); margin-top: 0.2rem;">
+              Submission links (START / OpenReview) and official COLING 2027 stylesheet links will be activated prior to the CFP release.
+            </p>
+          </div>
+          <!-- Replace href="#" with your SoftConf/START or OpenReview submission URL when ready -->
+          <a href="https://2027.coling-iccl.org/" target="_blank" rel="noopener" class="btn btn-primary" style="border: 1px solid var(--primary);">COLING 2027 Website &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organization (Editable Template Section for GitHub Pages) -->
+    <section id="organization">
+      <div class="section-header">
+        <h2>Workshop Organization</h2>
+      </div>
+      <p class="section-lead">
+        Jointly organized by the CHiPSAL and IndoNLP organizing committees.
+      </p>
+      <div class="org-grid">
+        <div class="org-card">
+          <strong>CHiPSAL Organizing Committee</strong>
+          <span>Challenges in Processing South Asian Languages</span>
+          <p style="margin-top: 0.45rem; font-size: 0.88rem;">
+            Website: <a href="https://sites.google.com/view/chipsal/" target="_blank" rel="noopener">sites.google.com/view/chipsal</a>
+          </p>
+        </div>
+        <div class="org-card">
+          <strong>IndoNLP Organizing Committee</strong>
+          <span>NLP for Indo-Aryan and Dravidian Languages</span>
+          <p style="margin-top: 0.45rem; font-size: 0.88rem;">
+            Website: <a href="https://indonlp-workshop.github.io/IndoNLP-Workshop/" target="_blank" rel="noopener">indonlp-workshop.github.io</a>
+          </p>
+        </div>
+        <!-- Add individual organizer cards here as needed:
+        <div class="org-card">
+          <strong>Organizer Name</strong>
+          <span>Affiliation, Country</span>
+        </div>
+        -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <div>
+        <h4>Joint CHiPSAL–IndoNLP Workshop @ COLING 2027</h4>
+        <p>May 14–15, 2027 &bull; Macau, China</p>
+        <p style="margin-top: 0.35rem; font-size: 0.85rem; color: #94a3b8;">
+          Co-located with the 32nd International Conference on Computational Linguistics (COLING 2027).
+        </p>
+      </div>
+      <div>
+        <h4>Contact the Organizers</h4>
+        <p>CHiPSAL Chairs: <a href="mailto:chipsal-chairs@googlegroups.com">chipsal-chairs@googlegroups.com</a></p>
+        <p>IndoNLP Organizers: <a href="mailto:indonlpworkshop@gmail.com">indonlpworkshop@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
