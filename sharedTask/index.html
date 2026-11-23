@@ -3,15 +3,65 @@
 
 <head>
     <meta charset="utf-8">
-    <base href="..">
+    <base href="../">
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" type="text/css" media="all" href="assets/main.css">
     <script src="assets/navigation.js" defer></script>
-    <meta name="description" content="Shared task information for the 2nd Joint CHiPSAL–IndoNLP Workshop at COLING 2027.">
+    <meta name="description" content="Call for Participation: CHiPSAL–IndoNLP 2027 Shared Tasks at COLING 2027 — NESA (Nepali Essay Scoring) and HealthMisInfo (Health Misinformation Detection).">
     <meta name="resource-type" content="document">
     <meta name="distribution" content="global">
-    <meta name="keywords" content="CHiPSAL, IndoNLP, COLING 2027, shared task">
-    <title>Shared Task | Joint CHiPSAL–IndoNLP Workshop</title>
+    <meta name="keywords" content="CHiPSAL, IndoNLP, COLING 2027, Shared Task, LowResourceNLP, Nepali Essay Scoring, Health Misinformation">
+    <title>Shared Tasks | Joint CHiPSAL–IndoNLP Workshop</title>
+
+    <style>
+        body ul {
+            list-style-type: disc !important;
+            list-style-position: outside !important;
+            margin-top: 0.6em !important;
+            margin-bottom: 1.1em !important;
+            padding-left: 2em !important;
+        }
+        body ul li {
+            display: list-item !important;
+            list-style-type: disc !important;
+            margin-bottom: 0.45em !important;
+        }
+        .task-box {
+            background-color: #f4f7fb;
+            border-left: 5px solid #1a4b84;
+            border-top: 1px solid #d6e2f0;
+            border-right: 1px solid #d6e2f0;
+            border-bottom: 1px solid #d6e2f0;
+            padding: 16px 20px;
+            margin: 18px auto 22px auto;
+            border-radius: 4px;
+        }
+        .task-box h4 {
+            margin-top: 0 !important;
+            margin-bottom: 8px !important;
+            color: #1a4b84;
+            font-size: 1.12em;
+        }
+        .task-tag {
+            display: inline-block;
+            background-color: #1a4b84;
+            color: #ffffff;
+            font-size: 0.78em;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-right: 7px;
+            vertical-align: middle;
+            text-transform: uppercase;
+        }
+        .task-links {
+            margin-top: 10px;
+            margin-bottom: 0 !important;
+        }
+        .task-links a {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,14 +70,16 @@
         <div class="top-left">
             <span class="title1">CHiPSAL</span><span class="title2">&ndash;IndoNLP</span> <span class="year">2027</span>
         </div>
-        <div class="bottom-right"> @COLING 2027<br>Macau, China </div>
+        <div class="bottom-right">
+            @COLING 2027<br>Macau, China
+        </div>
     </div>
 
     <table class="navigation">
         <tr>
-            <td class="navigation"><a class="current" aria-current="page" title="Workshop home page" href="index.html">Home</a></td>
+            <td class="navigation"><a title="Workshop home page" href="index.html">Home</a></td>
             <td class="navigation"><a title="Call for papers" href="call-for-paper/index.html">Call for Papers</a></td>
-            <td class="navigation"><a title="Shared task" href="sharedTask/index.html">Shared Task</a></td>
+            <td class="navigation"><a class="current" aria-current="page" title="Shared task" href="sharedTask/index.html">Shared Task</a></td>
             <td class="navigation"><a title="Workshop program" href="program/index.html">Program</a></td>
             <!-- <td class="navigation">
                 <details class="navigation-dropdown">
@@ -43,8 +95,63 @@
         </tr>
     </table>
 
+    <h3>Call for Participation: CHiPSAL&ndash;IndoNLP 2027 Shared Tasks at COLING 2027</h3>
+    <p style="text-align: justify;">
+        We invite researchers, students, and practitioners working on NLP, multilingual AI, education, and public
+        health to take part in two shared tasks advancing Natural Language Processing for low-resource languages as
+        part of the <b>Joint CHiPSAL&ndash;IndoNLP Workshop</b> at <b>COLING 2027</b> (May 14&ndash;15, 2027, Macau, China).
+    </p>
 
-    <h2>Shared Task</h2>
-    <p>Shared-task details, participation information, and important dates will be announced.</p>
+    <h3>Shared Tasks</h3>
+
+    <div class="task-box">
+        <h4><span class="task-tag">Task 1</span> NESA: Nepali Essay Scoring</h4>
+        <p style="text-align: justify;">
+            Build an automated essay scoring system to score student essays written in Nepali on a <b>1&ndash;10 scale</b>.
+            Submissions are evaluated and ranked using <b>Quadratic Weighted Kappa (QWK)</b>.
+        </p>
+        <ul class="task-links">
+            <li><b>Competition (Codabench):</b> <a href="https://www.codabench.org/competitions/18661/" target="_blank" rel="noopener">https://www.codabench.org/competitions/18661/</a></li>
+            <li><b>Task Details &amp; Data (GitHub):</b> <a href="https://github.com/shucoll/chipsal27-essay-scoring" target="_blank" rel="noopener">https://github.com/shucoll/chipsal27-essay-scoring</a></li>
+        </ul>
+    </div>
+
+    <div class="task-box">
+        <h4><span class="task-tag">Task 2</span> HealthMisInfo: Health Misinformation Detection</h4>
+        <p style="text-align: justify;">
+            Develop a classification system to identify health-related posts as either <b>factual</b> or
+            <b>misinformation</b>. Submissions are evaluated and ranked by <b>macro F1</b>.
+        </p>
+        <ul class="task-links">
+            <li><b>Competition (Codabench):</b> <a href="https://www.codabench.org/competitions/18660/" target="_blank" rel="noopener">https://www.codabench.org/competitions/18660/</a></li>
+            <li><b>Task Details &amp; Data (GitHub):</b> <a href="https://github.com/shucoll/chipsal27-health-misinfo" target="_blank" rel="noopener">https://github.com/shucoll/chipsal27-health-misinfo</a></li>
+        </ul>
+    </div>
+
+    <h3>Schedule &amp; Participation Details</h3>
+    <ul>
+        <li style="text-align: justify;">
+            <b>Development Phase:</b> Currently underway. Training/development datasets and baseline details are
+            available via the respective GitHub repositories and Codabench competition pages above.
+        </li>
+        <li style="text-align: justify;">
+            <b>Test Data Release:</b> Scheduled for <b>January 4, 2027</b>.
+        </li>
+        <li style="text-align: justify;">
+            <b>System Description Papers:</b> Participants are strongly encouraged to submit a system description
+            paper to the CHiPSAL&ndash;IndoNLP 2027 workshop proceedings (see the
+            <a href="call-for-paper/index.html">Call for Papers</a> page for formatting guidelines), though submitting
+            a paper is <b>not required</b> to participate in the shared tasks.
+        </li>
+    </ul>
+
+    <p style="text-align: justify;">
+        Join us in advancing NLP for low-resource languages!
+    </p>
+
+    <h4>Contact</h4>
+    <p>For general enquiries regarding the shared tasks, contact the organizers at
+        <a href="mailto:chipsal-chairs@googlegroups.com">chipsal-chairs@googlegroups.com</a>.
+    </p>
 </body>
 </html>
